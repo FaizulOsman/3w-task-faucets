@@ -74,7 +74,6 @@ const PaymentSection = () => {
               sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
               onChange={onChange}
             />
-            ,
           </div>
           <button type="submit" className="btn btn-primary">
             Send Request

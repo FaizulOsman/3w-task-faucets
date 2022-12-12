@@ -1,0 +1,11 @@
+.faq-sec {
+	width: 75%;
+	margin: auto;
+}
+
+@media only screen and (max-width: 688px) {
+	.Wallet {
+		width: 100% !important;
+		margin: auto;
+	}
+}

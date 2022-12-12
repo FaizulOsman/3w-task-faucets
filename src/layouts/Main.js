@@ -7,11 +7,11 @@ import Navbar from "../components/Navbar";
 const Main = () => {
   return (
     <div>
-      <Navbar></Navbar>
+      <Navbar />
       <Outlet>
-        <Home></Home>
+        <Home />
       </Outlet>
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 };

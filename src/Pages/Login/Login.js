@@ -5,7 +5,7 @@ import { FaGoogle, FaFacebook, FaInstagram } from "react-icons/fa";
 const Login = () => {
   return (
     <div style={{ backgroundColor: "#EEF2FE" }} className=" py-5">
-      <div className=" m-auto mt-5 card p-5 login w-50">
+      <div className=" m-auto mt-5 card p-5 formBox">
         <h2 className="text-center">Login</h2>
         <form className=" ">
           <div className="mb-3">

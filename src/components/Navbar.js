@@ -1,10 +1,12 @@
-import React from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FaUserCircle, FaWallet } from "react-icons/fa";
+import { NavbarValueProvider } from "../App";
 import MetaMaskImg from "../assets/images/MetaMask.svg";
 import WalletConnectImg from "../assets/images/WalletConnect.svg";
 
 const Navbar = () => {
+  const { setData } = useContext(NavbarValueProvider);
   const values = [
     {
       text: "Ethereum Kovan",
@@ -72,6 +74,7 @@ const Navbar = () => {
                   <select
                     className="form-select"
                     aria-label="Default select example"
+                    onChange={(e) => setData(e.target.value)}
                   >
                     {values.map((value, i) => (
                       <option key={i}>

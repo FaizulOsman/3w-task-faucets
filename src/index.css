@@ -15,3 +15,14 @@ code {
 :root {
   --purple: #9b1fe9;
 }
+
+/* ============== Responsive form box For Login and SignUp Page ============= */
+.formBox {
+  width: 50%;
+}
+
+@media only screen and (max-width: 688px) {
+  .formBox {
+    width: 100%;
+  }
+}

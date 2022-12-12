@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaGoogle, FaFacebook, FaInstagram } from "react-icons/fa";
-// import "../Login/Login.css";
 
 const SignUp = () => {
   return (
     <div style={{ backgroundColor: "#EEF2FE" }} className=" py-5">
-      <div className="m-auto mt-5 card p-5 login w-50">
+      <div className="m-auto mt-5 card p-5 formBox">
         <h2 className="text-center">Sign Up</h2>
         <form className=" ">
           <div className="mb-3">
