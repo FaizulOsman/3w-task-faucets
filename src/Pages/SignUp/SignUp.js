@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaGoogle, FaFacebook, FaInstagram } from "react-icons/fa";
+import useTitle from "../../customHooks/useTitle";
 
 const SignUp = () => {
+  useTitle("Sign Up");
+
   return (
     <div style={{ backgroundColor: "#EEF2FE" }} className="py-5">
       <div className="m-auto mt-5 card p-5 formBox border-0">

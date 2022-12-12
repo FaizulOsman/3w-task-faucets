@@ -1,7 +1,10 @@
 import React from "react";
+import useTitle from "../../customHooks/useTitle";
 import "./Faq.css";
 
 const Faq = () => {
+  useTitle("FAQ");
+
   return (
     <div className="faq-sec mb-5">
       <h2 style={{ color: "#9B1FE9" }} className="text-center py-4 fw-bold">
