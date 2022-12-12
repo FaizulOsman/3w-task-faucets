@@ -3,6 +3,7 @@ import { FaExclamationTriangle } from "react-icons/fa";
 import ReCAPTCHA from "react-google-recaptcha";
 import { NavbarValueProvider } from "../App";
 import "./PaymentSection.css";
+import RequestHistory from "./RequestHistory";
 
 const PaymentSection = () => {
   const { data } = useContext(NavbarValueProvider);
@@ -79,6 +80,7 @@ const PaymentSection = () => {
             Send Request
           </button>
         </form>
+        <RequestHistory />
       </div>
     </div>
   );
