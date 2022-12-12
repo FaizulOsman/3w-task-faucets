@@ -18,11 +18,33 @@ code {
 
 /* ============== Responsive form box For Login and SignUp Page ============= */
 .formBox {
-  width: 50%;
+  max-width: 445px;
+}
+
+.faqContainer {
+  max-width: 870px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .formBox {
+    max-width: 80%;
+  }
 }
 
 @media only screen and (max-width: 688px) {
   .formBox {
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 578px) {
+  .container {
+    max-width: 80%;
+  }
+  .connectWallet {
+    display: none;
+  }
+  .modalImgBg {
+    margin: 10px;
   }
 }

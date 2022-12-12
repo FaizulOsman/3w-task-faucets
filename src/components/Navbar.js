@@ -48,10 +48,10 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light py-3 bg-white">
-        <div className="container">
-          <Link className="navbar-brand text-purple-200" to="/">
-            <h3 className="fw-bold" style={{ color: "#9B1FE9" }}>
+      <nav className="navbar border-bottom navbar-expand-lg navbar-light bg-light py-3 bg-white">
+        <div className="container px-0">
+          <Link className="navbar-brand text-purple-200 py-1" to="/">
+            <h3 className="fs-3" style={{ color: "#9B1FE9" }}>
               Faucets
             </h3>
           </Link>
@@ -68,10 +68,11 @@ const Navbar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-            <div className="d-flex">
+            <div className="d-flex align-items-center justify-content-center">
               <div className="mx-3">
                 <form>
                   <select
+                    style={{ fontSize: "14px" }}
                     className="form-select"
                     aria-label="Default select example"
                     onChange={(e) => setData(e.target.value)}
@@ -88,16 +89,21 @@ const Navbar = () => {
 
               <div className="mx-2">
                 <button
-                  style={{ color: "#9B1FE9" }}
+                  style={{
+                    color: "#9B1FE9",
+                    border: "1px solid #9B1FE9",
+                    fontSize: "14px",
+                    fontWeight: "bold",
+                  }}
                   type="button"
-                  className="btn btn-outline-primary"
+                  className="btn"
                   data-bs-toggle="modal"
                   data-bs-target="#exampleModal"
                 >
                   <span className="px-2">
                     <FaWallet></FaWallet>
                   </span>
-                  Connect wallet
+                  <span className="connectWallet">Connect wallet</span>
                 </button>
 
                 <div
@@ -122,21 +128,27 @@ const Navbar = () => {
                       </div>
                       <div className="modal-body">
                         <div className="d-flex text-center justify-content-center align-items-center mx-2">
-                          <div className=" p-5 me-2  bg-light">
-                            <img
-                              className="img-fluid"
-                              src={MetaMaskImg}
-                              alt=""
-                            />
-                            <h4>MetaMask</h4>
-                          </div>
-                          <div className=" p-5 me-2 bg-light">
-                            <img
-                              className="img-fluid"
-                              src={WalletConnectImg}
-                              alt=""
-                            />
-                            <h4>WalletConnect</h4>
+                          <div className="row">
+                            <div className="col col-sm-6">
+                              <div className="py-5 px-5 bg-light modalImgBg">
+                                <img
+                                  className="img-fluid"
+                                  src={MetaMaskImg}
+                                  alt=""
+                                />
+                                <h4>MetaMask</h4>
+                              </div>
+                            </div>
+                            <div className="col col-sm-6 text-center">
+                              <div className="py-5 px-3 bg-light modalImgBg">
+                                <img
+                                  className="img-fluid"
+                                  src={WalletConnectImg}
+                                  alt=""
+                                />
+                                <h4>WalletConnect</h4>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -147,8 +159,8 @@ const Navbar = () => {
 
               <div className="dropdown mx-2">
                 <Link
-                  style={{ color: "#9B1FE9" }}
-                  className=" border-0 dropdown-toggle fs-4"
+                  style={{ backgroundColor: "#eee" }}
+                  className="border p-2 rounded-circle w-100 fs-3 d-flex align-items-center text-secondary"
                   href="#"
                   role="button"
                   id="dropdownMenuLink"

@@ -12,15 +12,25 @@ const PaymentSection = () => {
   }
   return (
     <div className="p-3">
-      <div style={{ backgroundColor: "#EEF2FE" }}>
+      <div style={{ backgroundColor: "#EEF2FE", fontSize: "14px" }}>
         <p className="p-2">
           <span className="px-2">
             <FaExclamationTriangle
               style={{ color: "#9B1FE9" }}
             ></FaExclamationTriangle>
           </span>
-          Your wallet is connected to <span className="fw-bold"> {data} </span>
-          so you are requesting <span className="fw-bold"> {data} </span>
+          Your wallet is connected to{" "}
+          {data ? (
+            <span className="fw-bold"> {data} </span>
+          ) : (
+            <span className="fw-bold"> Ethereum Kovan</span>
+          )}
+          , so you are requesting{" "}
+          {data ? (
+            <span className="fw-bold"> {data} </span>
+          ) : (
+            <span className="fw-bold"> Ethereum Kovan </span>
+          )}
           Link/ETH.
         </p>
       </div>
@@ -29,7 +39,7 @@ const PaymentSection = () => {
         <form>
           <div className="mb-3">
             <label
-              style={{ color: "#9B1FE9" }}
+              style={{ color: "#9B1FE9", fontSize: "14px" }}
               htmlFor="exampleDropdownFormEmail2"
               className="form-label fw-bold"
             >
@@ -45,7 +55,7 @@ const PaymentSection = () => {
           <div className="d-flex ">
             <div className="mb-3 w-50 me-3">
               <label
-                style={{ color: "#9B1FE9" }}
+                style={{ color: "#9B1FE9", fontSize: "14px" }}
                 htmlFor="exampleDropdownFormPassword2"
                 className="form-label fw-bold"
               >
@@ -69,13 +79,21 @@ const PaymentSection = () => {
               />
             </div>
           </div>
-          <div className="mb-2">
+          <div className="mb-3">
             <ReCAPTCHA
               sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
               onChange={onChange}
             />
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button
+            type="submit"
+            className="btn text-white"
+            style={{
+              backgroundColor: "#9B1FE9",
+              fontSize: "13px",
+              fontWeight: "bold",
+            }}
+          >
             Send Request
           </button>
         </form>

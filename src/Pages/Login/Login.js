@@ -4,8 +4,8 @@ import { FaGoogle, FaFacebook, FaInstagram } from "react-icons/fa";
 
 const Login = () => {
   return (
-    <div style={{ backgroundColor: "#EEF2FE" }} className=" py-5">
-      <div className=" m-auto mt-5 card p-5 formBox">
+    <div style={{ backgroundColor: "#EEF2FE" }} className="py-5">
+      <div className="m-auto mt-5 card p-5 formBox border-0">
         <h2 className="text-center">Login</h2>
         <form className=" ">
           <div className="mb-3">
@@ -17,7 +17,7 @@ const Login = () => {
             </label>
             <input
               type="email"
-              className="form-control"
+              className="form-control border-0 border-bottom px-0 rounded-0"
               id="exampleDropdownFormEmail2"
               placeholder="Enter Your Email"
             />
@@ -31,19 +31,29 @@ const Login = () => {
             </label>
             <input
               type="password"
-              className="form-control"
+              className="form-control border-0 border-bottom px-0 rounded-0"
               id="exampleDropdownFormPassword2"
               placeholder="Enter your Password"
             />
           </div>
 
-          <button type="submit" className="btn btn-primary w-100 mt-3 fw-bold">
+          <button
+            style={{ backgroundColor: "#9B1FE9" }}
+            type="submit"
+            className="btn w-100 mt-3 fw-bold text-white"
+          >
             Login
           </button>
         </form>
-        <div className="py-2 text-center">
-          <p>
-            Don't have an account? <Link to="/signup">Signup</Link>
+        <div className="py-3 text-center">
+          <p style={{ fontSize: "14px", fontWeight: "bold" }}>
+            Don't have an account?{" "}
+            <Link
+              to="/signup"
+              style={{ color: "#9B1FE9", textDecoration: "none" }}
+            >
+              Signup
+            </Link>
           </p>
           <h5>Or</h5>
         </div>
