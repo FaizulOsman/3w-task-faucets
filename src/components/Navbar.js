@@ -6,15 +6,42 @@ import WalletConnectImg from "../assets/images/WalletConnect.svg";
 
 const Navbar = () => {
   const values = [
-    "Ethereum Kovan",
-    "Arbitrum Rinkeby",
-    "Avalanche Fuji",
-    "BNB Chain Testnet",
-    "Ethereum Rinkeby",
-    "Fantom Testnet",
-    "Harmony Testnet",
-    "POA Network Sokol",
-    "Polygon Mumbai",
+    {
+      text: "Ethereum Kovan",
+      icon: "https://faucets.netlify.app/static/media/ethereum.42dac5dc.svg",
+    },
+    {
+      text: "Arbitrum Rinkeby",
+      icon: "https://faucets.netlify.app/static/media/arbitrum.79164059.svg",
+    },
+    {
+      text: "Avalanche Fuji",
+      icon: "https://faucets.netlify.app/static/media/avalanche.234db155.svg",
+    },
+    {
+      text: "BNB Chain Testnet",
+      icon: "https://faucets.netlify.app/static/media/bsc.d8c61230.svg",
+    },
+    {
+      text: "Ethereum Rinkeby",
+      icon: "https://faucets.netlify.app/static/media/ethereum.42dac5dc.svg",
+    },
+    {
+      text: "Fantom Testnet",
+      icon: "https://faucets.netlify.app/static/media/fantom.3f8c71bb.svg",
+    },
+    {
+      text: "Harmony Testnet",
+      icon: "https://faucets.netlify.app/static/media/harmony.02c2e3ba.svg",
+    },
+    {
+      text: "POA Network Sokol",
+      icon: "https://faucets.netlify.app/static/media/poa.90512ab9.svg",
+    },
+    {
+      text: "Polygon Mumbai",
+      icon: "https://faucets.netlify.app/static/media/polygon.97ff139c.svg",
+    },
   ];
 
   return (
@@ -47,7 +74,10 @@ const Navbar = () => {
                     aria-label="Default select example"
                   >
                     {values.map((value, i) => (
-                      <option key={i}>{value}</option>
+                      <option key={i}>
+                        {/* <img className="mx-3" src={value?.icon} alt="" /> */}
+                        {value?.text}
+                      </option>
                     ))}
                   </select>
                 </form>
