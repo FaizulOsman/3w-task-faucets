@@ -57,7 +57,7 @@ const Login = () => {
           </p>
           <h5>Or</h5>
         </div>
-        <div className="d-flex justify-content-around align-items-center w-25 m-auto">
+        <div className="d-flex justify-content-around align-items-center gap-2 w-25 m-auto">
           <FaGoogle></FaGoogle>
           <FaFacebook></FaFacebook>
           <FaInstagram></FaInstagram>

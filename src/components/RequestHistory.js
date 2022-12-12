@@ -2,7 +2,7 @@ import React from "react";
 
 const RequestHistory = () => {
   return (
-    <div className="py-4">
+    <div className="pt-4">
       <h4 style={{ fontSize: "15px", fontWeight: "bold" }} className="py-2">
         Request History
       </h4>
@@ -46,7 +46,7 @@ const RequestHistory = () => {
           role="tabpanel"
           aria-labelledby="pills-home-tab"
         >
-          <div className="py-2">
+          <div className="pt-2">
             <table className="table table-bordered text-center">
               <thead>
                 <tr>
