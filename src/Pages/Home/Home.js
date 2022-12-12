@@ -1,4 +1,5 @@
 import React from "react";
+import PaymentSection from "../../components/PaymentSection";
 
 const Home = () => {
   return (
@@ -15,6 +16,9 @@ const Home = () => {
           testnets so you can <br /> create and test your own oracle and
           Chainlinked smart contract
         </p>
+      </div>
+      <div className="container bg-white">
+        <PaymentSection />
       </div>
     </div>
   );
