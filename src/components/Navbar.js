@@ -4,9 +4,19 @@ import { FaUserCircle, FaWallet } from "react-icons/fa";
 import { NavbarValueProvider } from "../App";
 import MetaMaskImg from "../assets/images/MetaMask.svg";
 import WalletConnectImg from "../assets/images/WalletConnect.svg";
+import { AuthContext } from "../contexts/AuthProvider";
 
 const Navbar = () => {
   const { setData } = useContext(NavbarValueProvider);
+  const { user, logOut } = useContext(AuthContext);
+
+  // Log Out Function
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((e) => console.error(e));
+  };
+
   const values = [
     {
       text: "Ethereum Kovan",
@@ -158,30 +168,54 @@ const Navbar = () => {
               </div>
 
               <div className="dropdown mx-2">
-                <Link
-                  style={{ backgroundColor: "#eee" }}
-                  className="border p-2 rounded-circle w-100 fs-3 d-flex align-items-center text-secondary"
-                  href="#"
-                  role="button"
-                  id="dropdownMenuLink"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <FaUserCircle></FaUserCircle>
-                </Link>
-
+                {!user?.photoURL ? (
+                  <Link
+                    style={{ backgroundColor: "#eee" }}
+                    className="border p-2 rounded-circle w-100 fs-3 d-flex align-items-center text-secondary"
+                    href="#"
+                    role="button"
+                    id="dropdownMenuLink"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <FaUserCircle></FaUserCircle>
+                  </Link>
+                ) : (
+                  <Link
+                    href="#"
+                    className="border rounded-circle"
+                    role="button"
+                    id="dropdownMenuLink"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img
+                      style={{
+                        width: "32px",
+                        height: "32px",
+                        border: "1px solid black",
+                      }}
+                      className="rounded-circle"
+                      src={user?.photoURL}
+                      title={
+                        user?.uid ? `${user?.email}` : `User name not found`
+                      }
+                      alt="img"
+                    />
+                  </Link>
+                )}
                 <ul
                   className="dropdown-menu"
                   aria-labelledby="dropdownMenuLink"
                 >
                   <li>
                     <Link to="/login" className="dropdown-item">
-                      Login
+                      Log In
                     </Link>
                   </li>
                   <li>
                     <Link to="/signup" className="dropdown-item">
-                      SignUp
+                      Sign Up
                     </Link>
                   </li>
                   <li>
@@ -189,6 +223,13 @@ const Navbar = () => {
                       FAQ
                     </Link>
                   </li>
+                  {user && (
+                    <li>
+                      <Link className="dropdown-item" onClick={handleLogOut}>
+                        Log out
+                      </Link>
+                    </li>
+                  )}
                 </ul>
               </div>
             </div>

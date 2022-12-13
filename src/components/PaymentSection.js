@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { FaExclamationTriangle } from "react-icons/fa";
 import ReCAPTCHA from "react-google-recaptcha";
 import { NavbarValueProvider } from "../App";
-import "./PaymentSection.css";
 import RequestHistory from "./RequestHistory";
 
 const PaymentSection = () => {

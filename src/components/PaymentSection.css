@@ -1,9 +1,0 @@
-.Wallet {
-	width: 50%;
-}
-
-@media only screen and (max-width: 688px) {
-	.Wallet {
-		width: 100%;
-	}
-}

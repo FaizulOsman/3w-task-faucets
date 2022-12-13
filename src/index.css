@@ -16,9 +16,13 @@ code {
   --purple: #9b1fe9;
 }
 
-/* ============== Responsive form box For Login and SignUp Page ============= */
+/* ============== Responsive ============= */
 .formBox {
   max-width: 445px;
+}
+
+.Wallet {
+  width: 50%;
 }
 
 .faqContainer {
@@ -33,6 +37,9 @@ code {
 
 @media only screen and (max-width: 688px) {
   .formBox {
+    width: 100%;
+  }
+  .Wallet {
     width: 100%;
   }
 }
