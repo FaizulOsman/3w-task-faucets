@@ -75,8 +75,8 @@ const SignUp = () => {
     return (
       <div style={{ margin: "200px auto" }}>
         <div className="text-center">
-          <div class="spinner-border" role="status">
-            <span class="visually-hidden">Loading...</span>
+          <div className="spinner-border" role="status">
+            <span className="visually-hidden">Loading...</span>
           </div>
         </div>
       </div>
