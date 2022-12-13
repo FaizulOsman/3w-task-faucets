@@ -22,4 +22,10 @@ In this website React-router-dom, Tailwind, daisyUI, Lottie-react, React-hot-toa
 
 - React Icons: https://react-icons.github.io/react-icons/
 
+- React Google Recaptcha: https://www.npmjs.com/package/react-google-recaptcha
+
+- React Hot Toast: https://www.npmjs.com/package/react-hot-toast
+
+- Firebase Authentication: https://firebase.google.com/
+
 **Thanks for visiting...**
